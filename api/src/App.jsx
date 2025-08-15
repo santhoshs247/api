@@ -157,13 +157,6 @@ function App() {
                 <p className="text-xs text-purple-200">Advanced SQL Query Interface</p>
               </div>
             </div>
-            
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300">
-                <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium">Connected</span>
-              </div>
-            </div>
           </div>
         </div>
       </header>
