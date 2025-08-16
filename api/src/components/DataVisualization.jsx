@@ -284,8 +284,10 @@ const DataVisualization = ({ data }) => {
           )}
         </div>
       </div>
+
+             
       </div>
-    </div>
+    
   );
 };
 
