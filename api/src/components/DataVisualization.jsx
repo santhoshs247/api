@@ -284,34 +284,6 @@ const DataVisualization = ({ data }) => {
           )}
         </div>
       </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="backdrop-blur-xl bg-white/10 rounded-xl p-6 border border-white/20">
-          <h4 className="font-semibold text-white mb-3">📊 Key Insights</h4>
-          <ul className="text-white/70 text-sm space-y-2">
-            <li>• Most responses have high satisfaction ratings (4-5 stars)</li>
-            <li>• Customer satisfaction is the most surveyed category</li>
-            <li>• Geographic distribution shows good coverage</li>
-          </ul>
-        </div>
-
-        <div className="backdrop-blur-xl bg-white/10 rounded-xl p-6 border border-white/20">
-          <h4 className="font-semibold text-white mb-3">🎯 Recommendations</h4>
-          <ul className="text-white/70 text-sm space-y-2">
-            <li>• Focus on areas with lower ratings for improvement</li>
-            <li>• Increase survey participation in underrepresented regions</li>
-            <li>• Analyze feedback patterns for actionable insights</li>
-          </ul>
-        </div>
-
-        <div className="backdrop-blur-xl bg-white/10 rounded-xl p-6 border border-white/20">
-          <h4 className="font-semibold text-white mb-3">📈 Trends</h4>
-          <ul className="text-white/70 text-sm space-y-2">
-            <li>• Response rates are steady over time</li>
-            <li>• Quality ratings remain consistently high</li>
-            <li>• Engagement levels show positive trends</li>
-          </ul>
-        </div>
       </div>
     </div>
   );
