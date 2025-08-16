@@ -4,7 +4,6 @@ import QueryBuilder from './components/QueryBuilder';
 import ResultsDisplay from './components/ResultsDisplay';
 import Dashboard from './components/Dashboard';
 import DataVisualization from './components/DataVisualization';
-import QueryHistory from './components/QueryHistory';
 
 const mockSurveyData = [
   {
@@ -175,7 +174,6 @@ function App() {
                       <Icon className={`w-5 h-5 mr-3 ${isActive ? 'text-white' : 'text-white/50 group-hover:text-white/70'}`} />
                       <div className="text-left">
                         <div className="font-medium">{item.name}</div>
-                        <div className="text-xs opacity-60">{item.description}</div>
                       </div>
                     </button>
                   );
@@ -183,23 +181,7 @@ function App() {
               </nav>
             </div>
 
-            <div className="backdrop-blur-xl bg-white/10 rounded-xl p-4 border border-white/20">
-              <h3 className="text-sm font-semibold text-white/70 uppercase tracking-wider mb-3">Quick Stats</h3>
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-white/60 text-sm">Total Records</span>
-                  <span className="text-white font-semibold">{mockSurveyData.length}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-white/60 text-sm">Surveys</span>
-                  <span className="text-white font-semibold">3</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-white/60 text-sm">Avg Rating</span>
-                  <span className="text-white font-semibold">4.8</span>
-                </div>
-              </div>
-            </div>
+          
           </div>
 
           <div className="flex-1">
