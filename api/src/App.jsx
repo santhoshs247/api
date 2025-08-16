@@ -6,7 +6,6 @@ import Dashboard from './components/Dashboard';
 import DataVisualization from './components/DataVisualization';
 import QueryHistory from './components/QueryHistory';
 
-// Mock survey data
 const mockSurveyData = [
   {
     id: 1,
@@ -78,11 +77,9 @@ function App() {
     { id: 'history', name: 'History', icon: History, description: 'Query execution history' }
   ];
 
-  // Simulate SQL query execution
   const executeQuery = async (query) => {
     setIsLoading(true);
     
-    // Add to history
     const historyEntry = {
       id: Date.now(),
       query,
@@ -92,14 +89,11 @@ function App() {
     
     setQueryHistory(prev => [historyEntry, ...prev.slice(0, 9)]); // Keep last 10
 
-    // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 1500));
     
-    // Simple query parsing for demo
     let results = [...mockSurveyData];
     
     if (query.toLowerCase().includes('where')) {
-      // Simple filtering simulation
       if (query.toLowerCase().includes('rating >= 4')) {
         results = results.filter(item => item.rating >= 4);
       }
@@ -141,10 +135,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width=%2260%22%20height=%2260%22%20viewBox=%220%200%2060%2060%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg%20fill=%22none%22%20fill-rule=%22evenodd%22%3E%3Cg%20fill=%22%239C92AC%22%20fill-opacity=%220.1%22%3E%3Ccircle%20cx=%2230%22%20cy=%2230%22%20r=%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
-      {/* Header */}
       <header className="relative z-10 backdrop-blur-xl bg-white/10 border-b border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -163,7 +154,6 @@ function App() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex gap-8">
-          {/* Sidebar Navigation */}
           <div className="w-64 space-y-2">
             <div className="backdrop-blur-xl bg-white/10 rounded-xl p-4 border border-white/20">
               <h3 className="text-sm font-semibold text-white/70 uppercase tracking-wider mb-3">Navigation</h3>
@@ -193,7 +183,6 @@ function App() {
               </nav>
             </div>
 
-            {/* Quick Stats */}
             <div className="backdrop-blur-xl bg-white/10 rounded-xl p-4 border border-white/20">
               <h3 className="text-sm font-semibold text-white/70 uppercase tracking-wider mb-3">Quick Stats</h3>
               <div className="space-y-3">
@@ -213,7 +202,6 @@ function App() {
             </div>
           </div>
 
-          {/* Main Content */}
           <div className="flex-1">
             {renderCurrentView()}
           </div>
