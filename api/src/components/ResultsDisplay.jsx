@@ -33,7 +33,6 @@ const ResultsDisplay = ({ results, isLoading }) => {
 
   return (
     <div className="backdrop-blur-xl bg-white/10 rounded-xl border border-white/20 p-6">
-      {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <div>
           <h3 className="text-xl font-bold text-white flex items-center">
@@ -63,7 +62,6 @@ const ResultsDisplay = ({ results, isLoading }) => {
         </div>
       </div>
 
-      {/* JSON Output */}
       <pre className="bg-black/50 p-4 rounded-lg text-green-400 text-sm overflow-x-auto whitespace-pre-wrap">
         {JSON.stringify(results, null, 2)}
       </pre>

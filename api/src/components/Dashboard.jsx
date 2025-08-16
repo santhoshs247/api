@@ -67,7 +67,6 @@ const Dashboard = ({ data }) => {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
       <div className="backdrop-blur-xl bg-white/10 rounded-xl p-6 border border-white/20">
         <div className="flex items-center justify-between">
           <div>
@@ -81,7 +80,6 @@ const Dashboard = ({ data }) => {
         </div>
       </div>
 
-      {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatCard
           title="Total Responses"
@@ -114,7 +112,6 @@ const Dashboard = ({ data }) => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Rating Distribution */}
         <ChartCard title="Rating Distribution" icon={BarChart3}>
           <div className="space-y-3">
             {[5, 4, 3, 2, 1].map(rating => {
@@ -145,7 +142,6 @@ const Dashboard = ({ data }) => {
           </div>
         </ChartCard>
 
-        {/* Category Performance */}
         <ChartCard title="Category Performance" icon={PieChart}>
           <div className="space-y-4">
             {stats.categoryStats.map((category, index) => {
@@ -172,7 +168,6 @@ const Dashboard = ({ data }) => {
         </ChartCard>
       </div>
 
-      {/* Recent Activity */}
       <ChartCard title="Recent Survey Activity" icon={Calendar}>
         <div className="space-y-3">
           {data.slice(0, 5).map((item, index) => (

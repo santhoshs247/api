@@ -51,7 +51,6 @@ const QueryHistory = ({ history, onRerunQuery }) => {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
       <div className="backdrop-blur-xl bg-white/10 rounded-xl p-6 border border-white/20">
         <div className="flex items-center justify-between">
           <div>
@@ -63,7 +62,6 @@ const QueryHistory = ({ history, onRerunQuery }) => {
           </div>
           
           <div className="flex items-center space-x-4">
-            {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/40" />
               <input
@@ -75,7 +73,6 @@ const QueryHistory = ({ history, onRerunQuery }) => {
               />
             </div>
             
-            {/* Status Filter */}
             <div className="flex items-center space-x-2">
               <Filter className="w-4 h-4 text-white/60" />
               <select
@@ -93,7 +90,6 @@ const QueryHistory = ({ history, onRerunQuery }) => {
         </div>
       </div>
 
-      {/* Query History List */}
       {filteredHistory.length === 0 ? (
         <div className="backdrop-blur-xl bg-white/10 rounded-xl p-12 border border-white/20 text-center">
           <History className="w-16 h-16 text-white/20 mx-auto mb-4" />
@@ -119,7 +115,6 @@ const QueryHistory = ({ history, onRerunQuery }) => {
               >
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    {/* Query Preview */}
                     <div className="flex items-center mb-3">
                       <div className="flex items-center space-x-2 mr-4">
                         {getStatusIcon(item.status)}
@@ -151,8 +146,6 @@ const QueryHistory = ({ history, onRerunQuery }) => {
                       </div>
                     )}
                   </div>
-
-                  {/* Actions */}
                   <div className="flex items-center space-x-2 ml-4">
                     <button
                       onClick={() => onRerunQuery(item.query)}
@@ -184,7 +177,6 @@ const QueryHistory = ({ history, onRerunQuery }) => {
         </div>
       )}
 
-      {/* Summary Stats */}
       {history.length > 0 && (
         <div className="backdrop-blur-xl bg-white/10 rounded-xl p-6 border border-white/20">
           <h3 className="text-lg font-semibold text-white mb-4">History Statistics</h3>

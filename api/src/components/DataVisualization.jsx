@@ -207,7 +207,6 @@ const DataVisualization = ({ data }) => {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
       <div className="backdrop-blur-xl bg-white/10 rounded-xl p-6 border border-white/20">
         <div className="flex items-center justify-between">
           <div>
@@ -240,7 +239,6 @@ const DataVisualization = ({ data }) => {
         </div>
       </div>
 
-      {/* Chart Selector */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {Object.entries(chartConfigs).map(([key, config]) => {
           const ChartIcon = config.icon;
@@ -261,7 +259,6 @@ const DataVisualization = ({ data }) => {
         })}
       </div>
 
-      {/* Active Chart */}
       <div className="backdrop-blur-xl bg-white/10 rounded-xl p-8 border border-white/20">
         <div className="flex items-center justify-between mb-8">
           <h3 className="text-xl font-bold text-white flex items-center">
@@ -288,7 +285,6 @@ const DataVisualization = ({ data }) => {
         </div>
       </div>
 
-      {/* Insights */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="backdrop-blur-xl bg-white/10 rounded-xl p-6 border border-white/20">
           <h4 className="font-semibold text-white mb-3">📊 Key Insights</h4>

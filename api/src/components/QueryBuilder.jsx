@@ -66,7 +66,6 @@ GROUP BY location;`
 
   return (
     <div className="space-y-6">
-      {/* Query Type Selector */}
       <div className="backdrop-blur-xl bg-white/10 rounded-xl p-6 border border-white/20">
         <h2 className="text-xl font-bold text-white mb-4 flex items-center">
           <Code className="w-6 h-6 mr-2 text-indigo-400" />
@@ -123,7 +122,6 @@ GROUP BY location;`
           </div>
         )}
 
-        {/* Query Editor */}
         <div className="space-y-4">
           <div className="relative">
             <textarea
@@ -144,7 +142,6 @@ GROUP BY location;`
             </div>
           </div>
 
-          {/* Action Buttons */}
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <button
@@ -181,9 +178,6 @@ GROUP BY location;`
             </div>
           </div>
         </div>
-
-        
-        
       </div>
     </div>
   );
