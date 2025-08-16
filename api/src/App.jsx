@@ -67,13 +67,11 @@ function App() {
   const [currentView, setCurrentView] = useState('dashboard');
   const [queryResults, setQueryResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [queryHistory, setQueryHistory] = useState([]);
 
   const navigation = [
     { id: 'dashboard', name: 'Dashboard', icon: BarChart3, description: 'Overview and analytics' },
     { id: 'query', name: 'Query Builder', icon: Database, description: 'Build and execute SQL queries' },
-    { id: 'visualization', name: 'Data Viz', icon: TrendingUp, description: 'Interactive charts and graphs' },
-    { id: 'history', name: 'History', icon: History, description: 'Query execution history' }
+    { id: 'visualization', name: 'Data Viz', icon: TrendingUp, description: 'Interactive charts and graphs' }
   ];
 
   const executeQuery = async (query) => {
