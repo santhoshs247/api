@@ -74,8 +74,6 @@ const Dashboard = ({ data }) => {
             <p className="text-white/60">Real-time insights from your survey data</p>
           </div>
           <div className="flex items-center space-x-2 px-4 py-2 bg-emerald-500/20 rounded-lg">
-            <Activity className="w-4 h-4 text-emerald-400" />
-            <span className="text-emerald-300 font-medium">Live Data</span>
           </div>
         </div>
       </div>
@@ -167,44 +165,6 @@ const Dashboard = ({ data }) => {
           </div>
         </ChartCard>
       </div>
-
-      <ChartCard title="Recent Survey Activity" icon={Calendar}>
-        <div className="space-y-3">
-          {data.slice(0, 5).map((item, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-between p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors duration-200"
-            >
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-white font-medium text-sm">{item.respondent_id}</span>
-                </div>
-                <div>
-                  <p className="text-white font-medium">{item.survey_name}</p>
-                  <p className="text-white/60 text-sm">{item.question.substring(0, 60)}...</p>
-                </div>
-              </div>
-              <div className="text-right">
-                {item.rating && (
-                  <div className="flex items-center justify-end mb-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`w-4 h-4 ${
-                          i < item.rating ? 'text-amber-400 fill-current' : 'text-white/20'
-                        }`}
-                      />
-                    ))}
-                  </div>
-                )}
-                <p className="text-white/50 text-sm">
-                  {new Date(item.created_at).toLocaleDateString()}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </ChartCard>
     </div>
   );
 };

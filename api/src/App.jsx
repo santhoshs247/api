@@ -123,8 +123,6 @@ function App() {
         );
       case 'visualization':
         return <DataVisualization data={mockSurveyData} />;
-      case 'history':
-        return <QueryHistory history={queryHistory} onRerunQuery={executeQuery} />;
       default:
         return <Dashboard data={mockSurveyData} />;
     }
@@ -142,7 +140,6 @@ function App() {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-white">Survey Data Gateway</h1>
-                <p className="text-xs text-purple-200">Advanced SQL Query Interface</p>
               </div>
             </div>
           </div>
