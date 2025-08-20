@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Home</title>
+
+    <link href="https://microdata.gov.in/NADA/themes/nada52/fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://microdata.gov.in/NADA/themes/nada52/css/bootstrap.min.css">
+    
+
+<link rel="stylesheet" href="https://microdata.gov.in/NADA/themes/nada52/css/style.css?v2023">
+<link rel="stylesheet" href="https://microdata.gov.in/NADA/themes/nada52/css/custom.css?v2021">
+<link rel="stylesheet" href="https://microdata.gov.in/NADA/themes/nada52/css/home.css?v03212019">
+<link rel="stylesheet" href="https://microdata.gov.in/NADA/themes/nada52/css/variables.css?v07042021">
+<link rel="stylesheet" href="https://microdata.gov.in/NADA/themes/nada52/css/facets.css?v062021">
+<link rel="stylesheet" href="https://microdata.gov.in/NADA/themes/nada52/css/catalog-tab.css?v07052021">
+<link rel="stylesheet" href="https://microdata.gov.in/NADA/themes/nada52/css/catalog-card.css?v10102021-1">
+<link rel="stylesheet" href="https://microdata.gov.in/NADA/themes/nada52/css/filter-action-bar.css?v14052021-3">
+
+    <script src="https://microdata.gov.in/NADA/javascript/jquery/jquery.js"></script>
+    <script src="https://microdata.gov.in/NADA/themes/nada52/js/popper.min.js"></script>
+    <script src="https://microdata.gov.in/NADA/themes/nada52/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    var CI = {'base_url': 'https://microdata.gov.in/NADA/index.php'};
+
+    
+    if (top.frames.length!=0) {
+        top.location=self.document.location;
+    }
+
+    $(document).ready(function()  {
+        /*global ajax error handler */
+        $( document ).ajaxError(function(event, jqxhr, settings, exception) {
+            if(jqxhr.status==401){
+                window.location=CI.base_url+'/auth/login/?destination=catalog/';
+            }
+            else if (jqxhr.status>=500){
+                alert(jqxhr.responseText);
+            }
+        });
+
+    }); //end-document-ready
+
+</script>
+
+
+
+</head>
+
+<body>
+
+    <!-- site header -->
+    <style>
+.site-header .navbar-light .no-logo .navbar-brand--sitename {border:0px!important;margin-left:0px}
+.site-header .navbar-light .no-logo .nada-site-title {font-size:18px;}
+
+.site-header .navbar-dark {background-color: #08498d;color: #ffffff !important;padding: 0 !important;}
+ 
+.navbar-dark .container{
+            justify-content: center;
+        }
+       
+.site-header  .navbar-nav .nav-link:hover{
+        background: #ffffff !important;
+        color: #1f76d9  !important;
+        opacity: .8;
+
+    }
+  
+    .site-header .navbar-brand {
+        display:inline-flex !important;
+        margin-left:2%;
+    }
+    .site-header .text-muted{
+        font-size: .95rem;
+        letter-spacing: 5px;
+        color: #1f76d9 !important;
+        font-weight: 600;
+    }
+    .site-header .logo{
+        margin-top:10px;
+        max-height:80px;
+        border: none !important;
+    }
+    .site-header .headText{
+        font-size: 1.5rem;
+    }
+
+    .site-header .logo2{
+        position: relative;
+        margin-top:5px;
+        max-height:80px;
+        border: none !important;
+        margin-left:40px;
+        padding-bottom:3px;
+    }
+
+    .site-header .nav-link { 
+        background: var(--bs-secondary) !important;
+        color: #ffffff !important;
+    }
+
+    .site-header .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+        background: #ffffff !important;
+        color: #08498d !important;
+        opacity: .8;
+    }
+    .site-header .nav-item {
+        padding: 0 1px;
+    }
+    @media only screen and (max-width:767px) {
+        .site-header .logo2 {
+            margin-left: 0px;
+        }
+        .site-header .headText{
+          font-size: 14px;
+        }
+    }
+   
+</style>
+<header class="site-header">
+    
+        
+
+    <div class="container-fluid">
+
+        <div class="row align-items-center py-2">
+            <div class="col-5 col-md-3 text-left">
+                    
+                    <img src="/NADA/themes/nada52/images/logo.png" alt="Logo" class="logo img-fluid"></img>
+            </div>
+            <div class="col-4 col-md-6 text-center">
+                    
+                <a class="font-weight-bold mb-0 text-white text-decoration-none" href="https://microdata.gov.in/NADA/index.php"><h4 class="headText">An Online Microdata Library</h4></a>
+            </div>
+                        
+            <div class="col-3 col-md-3 text-right">
+                <img src="/NADA/themes/nada52/images/nss_75_logo.png" alt="Logo" class="logo2 img-fluid"></img>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 px-0">
+
+                <nav class="navbar navbar-expand-md navbar-dark rounded navbar-toggleable-md wb-navbar">
+                           
+                                    <button class="navbar-toggler navbar-toggler-right collapsed wb-navbar-button-toggler" type="button" data-toggle="collapse" data-target="#containerNavbar" aria-controls="containerNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                 <!-- Start menus -->
+                <!-- Start menus -->
+<div class="collapse navbar-collapse pt-2 pt-md-0 pt-lg-0" id="containerNavbar" aria-expanded="false">
+        <ul class="navbar-nav mx-auto text-center">
+                                            <li class="nav-item">
+                <a  class="nav-link active" class="nav-link" href="https://microdata.gov.in/NADA/index.php/home">Home</a>
+            </li>            
+                                            <li class="nav-item">
+                <a   class="nav-link" href="https://microdata.gov.in/NADA/index.php/dissemination">Policies and Guidelines</a>
+            </li>            
+                                            <li class="nav-item">
+                <a   class="nav-link" href="/NADA/Guide_to_download_microdata.pdf">Download Manual</a>
+            </li>            
+                                            <li class="nav-item">
+                <a   class="nav-link" href="https://microdata.gov.in/NADA/index.php/contact">Contact Us</a>
+            </li>            
+        
+        
+<li class="nav-item dropdown">
+            
+            <a class="nav-link dropdown-toggle" href="" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user-circle fa-lg"></i>Login            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="https://microdata.gov.in/NADA/index.php/auth/login">Login</a>
+            </div>
+                </li>
+<!-- /row -->
+    </ul>
+
+</div>
+<!-- Close Menus -->                    <!-- Close Menus -->
+
+                </nav>
+
+            </div>
+
+        </div>
+    </div>
+                   
+
+</header>
+    <!-- page body -->
+    <div class="wp-page-body default-wrapper page-home home">
+
+        <div class="body-content-wrap theme-nada-2">
+
+            <!--breadcrumbs -->
+            <div class="container">
+                                                    <ol class="breadcrumb wb-breadcrumb">
+                        	    <div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+           <span typeof="v:Breadcrumb">
+        	         	         <a class="active" href="https://microdata.gov.in/NADA/index.php/" rel="v:url" property="v:title">Home</a>
+                        
+       </span>
+               </div>
+                    </ol>
+                            </div>
+            <!-- /breadcrumbs -->
+
+            <!--
+	<h1>Home</h1>
+-->
+	<div> <style>
+            .tile-card {
+               width: 270px;  /* Adjusted width */
+               height: 100px; /* Increased height */
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+               padding: 5px;    
+               font-size: 14px;    
+              }
+              .rounded-lg {
+                   border-radius: 0.4rem !important;
+               }
+               .border {
+                   border: 1px solid #222 !important;
+               }
+      </style>
+   
+  <div style="background:#dceaee;padding:0 20px 0 20px;"><p style="padding:30px 15px 0 15px;"><span>National Statistics Office of India under Ministry of Statistics and Programme Implementation follows policy of open access to microdata from its extensive surveys and censuses. Our web-based cataloguing portal, powered by the National Data Archive (NADA) software from the International Household Survey Network(IHSN),provides researchers, policymakers, and the public with seamless access to detailed survey metadata and datasets. This gateway to official statistics is designed to support evidence-based research and informed decision-making  through transparent data dissemination.</span></p>
+   
+  <p style="padding:30px 15px 30px 15px;"><span> This system serves as a portal for researchers to browse, search, and download relevant census or survey documents and metadata. The Microdata Archive provides web based access to the complete metadata and unit level data of over <b>178 surveys</b> and censuses. </span></p></div>
+
+
+   <div class="container mt-5 style=background:#ffffff;">
+   <div class="row justify-content-center align-items-center ">
+          <div class="col-md-3 m-2">        
+           <div class="card rounded-lg border border-dark tile-card">
+                   <div class="card-body">
+                   <h5 class="card-title text-center"><a href="catalog/ASI" target="_blank">Annual Survey of Industries</a></h5>                          
+                   </div>
+           </div>
+       </div>            
+       <div class="col-md-3 m-2">  
+           <div class="card rounded-lg border border-dark tile-card">
+               <div class="card-body">
+                   <h5 class="card-title text-center"><a href="catalog/148" target="_blank">Index of Industrial Production</a></h5>
+                            
+               </div>
+           </div>        
+       </div>
+       <div class="col-md-3 m-2">  
+           <div class="card rounded-lg border border-dark tile-card">
+                   <div class="card-body">
+                   <h5 class="card-title text-center"><a href="catalog/CEXP" target="_blank">Household Consumption Expenditure</a></h5>
+                                  
+               </div>
+           </div>
+       </div>       
+   </div>
+   <div class="row justify-content-center align-items-center">
+        <div class="col-md-3 m-2">        
+           <div class="card rounded-lg border border-dark tile-card">
+                   <div class="card-body">
+                   <h5 class="card-title text-center"><a href="catalog/ECO" target="_blank">Economic Census</a></h5>                          
+                   </div>
+           </div>
+       </div>            
+       <div class="col-md-3 m-2">  
+           <div class="card rounded-lg border border-dark tile-card">
+               <div class="card-body">
+                   <h5 class="card-title text-center"><a href="catalog/ENT" target="_blank">Enterprises Surveys</a></h5>
+                            
+               </div>
+           </div>        
+       </div>
+       <div class="col-md-3 m-2">  
+           <div class="card rounded-lg border border-dark tile-card">
+                   <div class="card-body">
+                   <h5 class="card-title text-center"><a href="catalog/PLFS" target="_blank">Periodic Labour Force Survey</a></h5>
+                                  
+               </div>
+           </div>
+       </div>       
+   </div>
+   
+   <div class="row justify-content-center align-items-center">
+          <div class="col-md-3 m-2">        
+           <div class="card rounded-lg border border-dark tile-card">
+                   <div class="card-body">
+                   <h5 class="card-title text-center"><a href="catalog/EUE" target="_blank">Employment and Unemployment</a></h5>                          
+                   </div>
+           </div>
+       </div>            
+       <div class="col-md-3 m-2">  
+           <div class="card rounded-lg border border-dark tile-card">
+               <div class="card-body">
+                   <h5 class="card-title text-center"><a href="catalog/LLS" target="_blank">Land and Livestock Holding Surveys</a></h5>
+                            
+               </div>
+           </div>        
+       </div>
+       <div class="col-md-3 m-2">  
+           <div class="card rounded-lg border border-dark tile-card">
+                   <div class="card-body">
+                   <h5 class="card-title text-center"><a href="catalog/OTH" target="_blank">Other Surveys</a></h5>
+                                  
+               </div>
+           </div>
+       </div>       
+   </div>
+   
+   </div></div>
+        </div>
+    </div>
+
+    <!-- page footer -->
+    <footer>
+    <!-- footer top section -->
+        <!-- End footer top section -->
+  <style>
+    .text-muted{
+        color:#5c82a3 !important;
+    }
+  </style>
+<div class="modal fade" id="discModal" tabindex="-1" role="dialog" aria-labelledby="discLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="height:350px; width: 700px; overflow-y: auto; margin-right: auto;">
+            <div class="modal-header">
+                <h6 class="modal-title" id="discLabel">Disclaimer</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            Ministry of Statistics & Programme Implementation (MoSPI) disclaims any liability or responsibility arising from the use of the Microdata Portal - https://microdata[dot]gov[dot]in or the contents of the portal. The Ministry and its staff, individually and collectively, shall not be liable for any financial or other consequences whatsoever arising from the use of the content of the portal, including the inappropriate, improper, or fraudulent use of such content.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- footer bottom section -->
+    <div class="full-row-footer-black-components">
+        <div class="container">
+            <div class="footer">
+                <div class="row">
+
+                    <!-- / footer logo -->
+                    <div class="col-12 col-md-6">
+                        <p class="text-left text-white">
+                            <small>
+                                <script language="JavaScript">
+                                var time = new Date();
+                                var year = time.getYear();
+                                if (year < 2000)
+                                year = year + 1900 + ", ";
+                                //document.write('@'+year); // End -->
+                                </script> 
+                               <a tabindex="-1" href="https://mospi.gov.in/" target="_blank"> <span class="text-white m-1">MoSPI Website</span></a>
+                               <a tabindex="-1" href="https://esankhyiki.mospi.gov.in/" target="_blank"> <span class="text-white m-1">eSankhyiki Website</span></a> 
+                               <a tabindex="-1" href="#" data-toggle="modal" data-target="#discModal"> <span class="text-white m-1">Disclaimer</span> </a>
+                                </small>
+                        </p>
+                    </div>
+                    <!-- / footer logo -->
+
+                    <!-- Copyrights-->
+                    <div class="col-12 col-md-6">                                                 
+                        <p class="text-center text-lg-right">                                   
+                            <a href="https://www.facebook.com/GoIStats/?modal=admin_todo_tour" class="text-white pr-1" target="_blank" >
+							 <img style="border: none; outline: none;" src="/NADA/themes/nada52/images/fb.svg" alt="facebook"></img>
+							</a>
+                            <a href="https://x.com/GoIStats?s=08" class="text-white pr-2"  target="_blank">
+							 <img style="border: none;outline: none;" src="/NADA/themes/nada52/images/twitter.svg" alt="X"></img>
+							</a>
+                            <a href="https://www.youtube.com/@GoIStats" class="text-white pr-2"  target="_blank">
+							<img style="border: none;outline: none;" src="/NADA/themes/nada52/images/youtube.svg" alt="YouTube"></img>
+							</a>
+                            <a href="https://www.instagram.com/goistats/?igshid=1ea2ccd5gsb85" class="text-white" target="_blank">
+							<img style="border: none;outline: none;" src="/NADA/themes/nada52/images/instagram.svg" alt="Instagram"></img>
+							</a>    
+                                                                    
+                        </p>
+                    </div>
+                    <!-- / Copyrights  -->
+
+                </div>
+                <div class="row">
+                <div class="col-12 col-md-6">
+                        <p class="text-left text-white">
+                            <small>
+                             <span class="text-muted">Powered by NADA 5.4</span>   
+                            </small>
+                        </p> 
+                 </div>
+                
+                </div>  
+            </div>
+        </div>
+    </div>
+</footer></body>
+
+</html>

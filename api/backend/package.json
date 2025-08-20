@@ -1,0 +1,20 @@
+{
+  "name": "mospi-datahub",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js",
+    "fetch": "node jobs/fetch-datasets.js",
+    "migrate": "knex migrate:latest",
+    "monitor": "curl http://localhost:3001/fetch-status"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "dotenv": "^17.2.1",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.0.1",
+    "knex": "^2.5.1",
+    "node-cron": "^3.0.3",
+    "sqlite3": "^5.1.7",
+    "xlsx": "^0.18.5"
+  }
+}

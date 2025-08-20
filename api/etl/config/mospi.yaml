@@ -1,0 +1,46 @@
+# config/mospi.yaml
+datasets:
+  - name: "PLFS"
+    url: "https://microdata.gov.in/nada43/index.php/catalog/PLFS"
+    download_url: "https://microdata.gov.in/nada43/index.php/catalog/{id}/download" # Add this
+    type: "csv"
+    # ... rest of config
+    frequency: "monthly"
+    schema:
+      - name: "state"
+        type: "string"
+        privacy_level: 1
+        required: true
+      - name: "district"
+        type: "string"
+        privacy_level: 2
+      - name: "age_group"
+        type: "enum"
+        values: ["15-29", "30-45", "46-60", "60+"]
+        required: true
+      - name: "employment_status"
+        type: "string"
+      - name: "income"
+        type: "number"
+        privacy_level: 3
+    
+  # HCES commented out until Stata support is available
+  # - name: "HCES"
+  #   url: "https://microdata.gov.in/nada43/index.php/catalog/HCES"
+  #   type: "stata"
+  #   frequency: "annual"
+  #   schema:
+  #     - name: "household_id"
+  #       type: "string"
+  #       required: true
+  #     - name: "expenditure_category"
+  #       type: "string"
+  #       required: true
+  #     - name: "amount"
+  #       type: "number"
+  #       precision: 2
+  #     - name: "urban_rural"
+  #       type: "enum"
+  #       values: ["urban", "rural"]
+  #     - name: "survey_round"
+  #       type: "string"
